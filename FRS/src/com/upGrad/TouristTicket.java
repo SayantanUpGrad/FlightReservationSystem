@@ -1,10 +1,12 @@
 package com.upGrad;
+import java.time.LocalDateTime;
 import java.util.Arrays;
-public class TouristTicket {
+public class TouristTicket extends Ticket {
     private String hotelAddress;
     private String[] selectedTouristLocation=new String[5];
 
-    public TouristTicket(String hotelAddress, String[] selectedTouristLocation) {
+    public TouristTicket(String PNRNumber, String departureLocation, String destinationLocation, LocalDateTime arrival, LocalDateTime destination, Passanger passanger, String seatNo, boolean isCanceled, int price, Flight flight, String hotelAddress, String[] selectedTouristLocation) {
+        super(PNRNumber,departureLocation,destinationLocation,arrival,destination,passanger,seatNo,isCanceled,price,flight);
         this.hotelAddress = hotelAddress;
         this.selectedTouristLocation = selectedTouristLocation;
     }
